@@ -9,7 +9,7 @@ using Sitecore;
 using Sitecore.Diagnostics;
 using Sitecore.SecurityModel;
 
-namespace RelevateImport.CustomItems.RelevateImport
+namespace RelevateImport.CustomItems.CsvImport
 {
 	public partial class UserCSVSheetItem
 	{

@@ -5,7 +5,7 @@ using Sitecore.Configuration;
 using Sitecore.Data.Fields;
 using Sitecore.Web.UI.WebControls;
 
-namespace RelevateImport.CustomItems.RelevateImport
+namespace RelevateImport.CustomItems.CsvImport
 {
 	public partial class UserCSVSheetItem 
 	{

@@ -61,35 +61,51 @@
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
       <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\User Defined\Relevate Import.item">
+    <SitecoreItem Include="sitecore\templates\User Defined\Csv Import.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\User Defined\Relevate Import\User CSV Sheet.item">
+    <SitecoreItem Include="sitecore\templates\User Defined\Csv Import\User CSV Sheet.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\User Defined\Relevate Import\User CSV Sheet\__Standard Values.item">
+    <SitecoreItem Include="sitecore\templates\User Defined\Csv Import\User CSV Sheet\__Standard Values.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\User Defined\Relevate Import\User CSV Sheet\CSV Data.item">
+    <SitecoreItem Include="sitecore\templates\User Defined\Csv Import\User CSV Sheet\CSV Data.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\User Defined\Relevate Import\User CSV Sheet\CSV Data\File Name.item">
+    <SitecoreItem Include="sitecore\templates\User Defined\Csv Import\User CSV Sheet\CSV Data\File Name.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\User Defined\Relevate Import\User CSV Sheet\CSV Data\Last Updated.item">
+    <SitecoreItem Include="sitecore\templates\User Defined\Csv Import\User CSV Sheet\CSV Data\Last Updated.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\User Defined\Relevate Import\User CSV Sheet\CSV Data\Role.item">
+    <SitecoreItem Include="sitecore\templates\User Defined\Csv Import\User CSV Sheet\User Data.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\User Defined\Relevate Import\User CSV Sheet\CSV Data\Title.item">
+    <SitecoreItem Include="sitecore\templates\User Defined\Csv Import\User CSV Sheet\User Data\Custom Profile.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\User Defined\Csv Import\User CSV Sheet\User Data\Email Field Name.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\User Defined\Csv Import\User CSV Sheet\User Data\Full Name Field Names.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\User Defined\Csv Import\User CSV Sheet\User Data\Identity Field Name.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\User Defined\Csv Import\User CSV Sheet\User Data\Role.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>

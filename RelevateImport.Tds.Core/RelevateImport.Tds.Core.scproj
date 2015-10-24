@@ -106,7 +106,7 @@
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
       <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\system\Settings\Security\Profiles\Relevate User.item">
+    <SitecoreItem Include="sitecore\system\Settings\Security\Profiles\HotDeals User.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
       <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
@@ -126,43 +126,43 @@
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\System\Security\Custom Profiles\Relevate Profile.item">
+    <SitecoreItem Include="sitecore\templates\System\Security\Custom Profiles\HotDeals Profile.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\System\Security\Custom Profiles\Relevate Profile\Relevate Profile Data.item">
+    <SitecoreItem Include="sitecore\templates\System\Security\Custom Profiles\HotDeals Profile\Relevate Profile Data.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\System\Security\Custom Profiles\Relevate Profile\Relevate Profile Data\Channel.item">
+    <SitecoreItem Include="sitecore\templates\System\Security\Custom Profiles\HotDeals Profile\Relevate Profile Data\Channel.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\System\Security\Custom Profiles\Relevate Profile\Relevate Profile Data\Contact Id.item">
+    <SitecoreItem Include="sitecore\templates\System\Security\Custom Profiles\HotDeals Profile\Relevate Profile Data\Contact Id.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\System\Security\Custom Profiles\Relevate Profile\Relevate Profile Data\First Name.item">
+    <SitecoreItem Include="sitecore\templates\System\Security\Custom Profiles\HotDeals Profile\Relevate Profile Data\First Name.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\System\Security\Custom Profiles\Relevate Profile\Relevate Profile Data\Last Name.item">
+    <SitecoreItem Include="sitecore\templates\System\Security\Custom Profiles\HotDeals Profile\Relevate Profile Data\Last Name.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\System\Security\Custom Profiles\Relevate Profile\Relevate Profile Data\Promo Code.item">
+    <SitecoreItem Include="sitecore\templates\System\Security\Custom Profiles\HotDeals Profile\Relevate Profile Data\Promo Code.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\System\Security\Custom Profiles\Relevate Profile\Relevate Profile Data\Relevate Email.item">
+    <SitecoreItem Include="sitecore\templates\System\Security\Custom Profiles\HotDeals Profile\Relevate Profile Data\Relevate Email.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\System\Security\Custom Profiles\Relevate Profile\Relevate Profile Data\Segment Name.item">
+    <SitecoreItem Include="sitecore\templates\System\Security\Custom Profiles\HotDeals Profile\Relevate Profile Data\Segment Name.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\System\Security\Custom Profiles\Relevate Profile\Relevate Profile Data\Zip Code.item">
+    <SitecoreItem Include="sitecore\templates\System\Security\Custom Profiles\HotDeals Profile\Relevate Profile Data\Zip Code.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>

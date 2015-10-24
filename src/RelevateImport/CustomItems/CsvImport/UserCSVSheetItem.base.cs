@@ -7,7 +7,7 @@ using CustomItemGenerator.Fields.LinkTypes;
 using CustomItemGenerator.Fields.ListTypes;
 using CustomItemGenerator.Fields.SimpleTypes;
 
-namespace RelevateImport.CustomItems.RelevateImport
+namespace RelevateImport.CustomItems.CsvImport
 {
 public partial class UserCSVSheetItem : CustomItem
 {
@@ -38,15 +38,6 @@ public static implicit operator Item(UserCSVSheetItem customItem)
 #region Field Instance Methods
 
 
-public CustomTextField Title
-{
-	get
-	{
-		return new CustomTextField(InnerItem, InnerItem.Fields["Title"]);
-	}
-}
-
-
 public CustomTextField Role
 {
 	get
@@ -56,11 +47,47 @@ public CustomTextField Role
 }
 
 
+public CustomTextField IdentityFieldName
+{
+	get
+	{
+		return new CustomTextField(InnerItem, InnerItem.Fields["Identity Field Name"]);
+	}
+}
+
+
+public CustomTextField EmailFieldName
+{
+	get
+	{
+		return new CustomTextField(InnerItem, InnerItem.Fields["Email Field Name"]);
+	}
+}
+
+
+public CustomTextField FullNameFieldNames
+{
+	get
+	{
+		return new CustomTextField(InnerItem, InnerItem.Fields["Full Name Field Names"]);
+	}
+}
+
+
 public CustomTextField FileName
 {
 	get
 	{
 		return new CustomTextField(InnerItem, InnerItem.Fields["File Name"]);
+	}
+}
+
+
+public CustomMultiListField CustomProfile
+{
+	get
+	{
+		return new CustomMultiListField(InnerItem, InnerItem.Fields["Custom Profile"]);
 	}
 }
 

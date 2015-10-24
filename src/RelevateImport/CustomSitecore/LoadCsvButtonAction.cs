@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using RelevateImport.CSVParser;
-using RelevateImport.CustomItems.RelevateImport;
+using RelevateImport.CustomItems.CsvImport;
 using RelevateImport.Membership;
 using Sitecore.Shell.Framework.Commands;
 

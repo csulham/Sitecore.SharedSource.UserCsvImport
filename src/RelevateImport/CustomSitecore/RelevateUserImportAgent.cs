@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using RelevateImport.CustomItems.RelevateImport;
+using RelevateImport.CustomItems.CsvImport;
 using Sitecore.Diagnostics;
 
 namespace RelevateImport.CustomSitecore

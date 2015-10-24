@@ -64,11 +64,11 @@
     <Compile Include="CustomItems\RelevateImport\RelevateImportSettingsItem.static.cs">
       <DependentUpon>RelevateImportSettingsItem.base.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustomItems\RelevateImport\UserCSVSheetItem.base.cs" />
-    <Compile Include="CustomItems\RelevateImport\UserCSVSheetItem.instance.cs">
+    <Compile Include="CustomItems\CsvImport\UserCSVSheetItem.base.cs" />
+    <Compile Include="CustomItems\CsvImport\UserCSVSheetItem.instance.cs">
       <DependentUpon>UserCSVSheetItem.base.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustomItems\RelevateImport\UserCSVSheetItem.static.cs">
+    <Compile Include="CustomItems\CsvImport\UserCSVSheetItem.static.cs">
       <DependentUpon>UserCSVSheetItem.base.cs</DependentUpon>
     </Compile>
     <Compile Include="CustomSitecore\LoadCsvButtonAction.cs" />
