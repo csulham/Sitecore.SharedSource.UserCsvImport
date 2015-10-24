@@ -9,18 +9,18 @@ using Sitecore.Diagnostics;
 
 namespace RelevateImport.CSVParser
 {
-	public class RelevateFileLoader
+	public class CsvFileLoader
 	{
 		private string CsvFilePath { get; set; }
 		public FileInfo CsvFile { get; private set; } 
 
-		public RelevateFileLoader(string csvFileName)
+		public CsvFileLoader(string csvFileName)
 		{
 			CsvFilePath = csvFileName;
 			CsvFile = new FileInfo(CsvFilePath);
 		}
 
-		public List<RelevateUser> GetUsersFromCsv()
+		public List<DictionaryMapped> GetUsersFromCsv()
 		{
 			if (!File.Exists(CsvFilePath))
 			{
@@ -34,8 +34,10 @@ namespace RelevateImport.CSVParser
 					Log.Debug(string.Format("Attempting to parse user CSV sheet {0}.", CsvFilePath));
 					using (var reader = new CsvReader(sr))
 					{
-						reader.Configuration.RegisterClassMap<RelevateUserMapper>();
-						return reader.GetRecords<RelevateUser>().ToList();
+						//reader.Configuration.RegisterClassMap<DictionaryMapper>();
+						//return reader.GetRecords<DictionaryMapped>().ToList();
+						var records = reader.GetRecords<dynamic>();
+						return records.Select(r => new DictionaryMapped(r as IDictionary<string, object>)).ToList();
 					}
 				}
 			}

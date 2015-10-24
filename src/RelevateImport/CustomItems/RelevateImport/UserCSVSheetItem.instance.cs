@@ -1,5 +1,7 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using RelevateImport.CSVParser;
 using RelevateImport.Downloader;
 using RelevateImport.Membership;
@@ -29,7 +31,7 @@ namespace RelevateImport.CustomItems.RelevateImport
 				throw new ArgumentNullException("FileName", "File Name must be specified.");
 			}
 
-			var loader = new RelevateFileLoader(CsvFileFullPath);
+			var loader = new CsvFileLoader(CsvFileFullPath);
 
 			if (!loader.CsvFile.Exists)
 			{
@@ -42,14 +44,17 @@ namespace RelevateImport.CustomItems.RelevateImport
 			}
 
 			// Load the File
-			var users = loader.GetUsersFromCsv();
+			var mapped = loader.GetUsersFromCsv();
+
+			// Parse the mapped users
+			var users = LoadMappedUsers(mapped);
 
 			// Take the timestamp
 			DateTime editStartTime = loader.CsvFile.LastWriteTime;
 
 			// Load the users
 			var um = new UserManager(Role.Raw);
-			um.CreateUsers(users);
+			um.CreateUsers(users.ToList());
 
 			// Update the File Date
 			using (new SecurityDisabler())
@@ -57,6 +62,26 @@ namespace RelevateImport.CustomItems.RelevateImport
 				InnerItem.Editing.BeginEdit();
 				LastUpdated.Field.InnerField.SetValue(DateUtil.ToIsoDate(editStartTime, false), false);
 				InnerItem.Editing.EndEdit();
+			}
+		}
+
+		private IEnumerable<CsvUser> LoadMappedUsers(List<DictionaryMapped> mapped)
+		{
+			foreach (var map in mapped)
+			{
+				var user = new CsvUser("str_contact_id", new[] { "First_Name", "Last_Name" }, "EMail", map.Attributes);
+				if (string.IsNullOrEmpty(user.Identity))
+				{
+					Log.Debug("User contained no identity data. \nRow Data = " + map.DictionaryData, this);
+					continue;
+				}
+				if (string.IsNullOrEmpty(user.Email))
+				{
+					Log.Debug("User contained no email data. \nRow Data = "+ map.DictionaryData, this);
+					continue;
+				}
+
+				yield return user;
 			}
 		}
 

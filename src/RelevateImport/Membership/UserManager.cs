@@ -25,9 +25,9 @@ namespace RelevateImport.Membership
 			_roleName = AddDomain(role);
 		}
 
-		public void CreateUsers(List<RelevateUser> users)
+		public void CreateUsers(List<CsvUser> users)
 		{
-			foreach (RelevateUser user in users)
+			foreach (CsvUser user in users)
 			{
 				try
 				{
@@ -40,7 +40,7 @@ namespace RelevateImport.Membership
 			}
 		}
 
-		private void CreateUser(RelevateUser relevateUser)
+		private void CreateUser(CsvUser csvUser)
 		{
 			UserRole = GetOrCreateRole();
 
@@ -49,10 +49,10 @@ namespace RelevateImport.Membership
 				throw new MembershipCreateUserException("Could not get role " + _roleName);
 			}
 
-			User membershipUser = GetOrCreateUser(relevateUser);
+			User membershipUser = GetOrCreateUser(csvUser);
 			if (membershipUser == null)
 			{
-				throw new MembershipCreateUserException(string.Format("Error creating user {0}, {1}", relevateUser.ContactId, relevateUser.Email));
+				throw new MembershipCreateUserException(string.Format("Error creating user {0}, {1}", csvUser.Identity, csvUser.Email));
 			}
 
 			// Add Role
@@ -62,7 +62,7 @@ namespace RelevateImport.Membership
 			}
 
 			// Update Profile
-			UpdateProfile(membershipUser, relevateUser);
+			UpdateProfile(membershipUser, csvUser);
 		}
 
 		private Role GetOrCreateRole()
@@ -82,9 +82,9 @@ namespace RelevateImport.Membership
 			}
 		}
 
-		private User GetOrCreateUser(RelevateUser relevateUser)
+		private User GetOrCreateUser(CsvUser csvUser)
 		{
-			string userName = AddDomain(relevateUser.ContactId);
+			string userName = AddDomain(csvUser.Identity);
 			try
 			{
 				foreach (System.Web.Security.MembershipUser mUser in
@@ -102,16 +102,16 @@ namespace RelevateImport.Membership
 			}
 			catch (Exception ex)
 			{
-				Log.Error(string.Format("Error creating user {0}, {1}", relevateUser.ContactId, relevateUser.Email), ex, this);
+				Log.Error(string.Format("Error creating user {0}, {1}", csvUser.Identity, csvUser.Email), ex, this);
 				throw;
 			}
 		}
 
-		private void UpdateProfile(User user, RelevateUser relevateUser)
+		private void UpdateProfile(User user, CsvUser csvUser)
 		{
-			user.Profile.Email = relevateUser.Email.Trim();
-			user.Profile.FullName = string.Format("{0} {1}", relevateUser.FirstName.Trim(), relevateUser.LastName.Trim()).Trim();
-
+			user.Profile.Email = csvUser.Email;
+			user.Profile.FullName = csvUser.Name;
+			/*
 			user.Profile.SetCustomProperty(RelevateProfileItem.ContactIdFieldName, relevateUser.ContactId.Trim());
 			user.Profile.SetCustomProperty(RelevateProfileItem.FirstNameFieldName, relevateUser.FirstName.Trim());
 			user.Profile.SetCustomProperty(RelevateProfileItem.LastNameFieldName, relevateUser.LastName.Trim());
@@ -120,7 +120,7 @@ namespace RelevateImport.Membership
 			user.Profile.SetCustomProperty(RelevateProfileItem.PromoCodeFieldName, relevateUser.PromoCode.Trim());
 			user.Profile.SetCustomProperty(RelevateProfileItem.ChannelFieldName, relevateUser.Channel.Trim());
 			user.Profile.SetCustomProperty(RelevateProfileItem.SegmentNameFieldName, relevateUser.SegmentName.Trim());
-
+			*/
 			user.Profile.Save();
 		}
 

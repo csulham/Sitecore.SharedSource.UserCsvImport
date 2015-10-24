@@ -51,8 +51,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CSVParser\CsvUser.cs" />
+    <Compile Include="CSVParser\DictionaryMapped.cs" />
     <Compile Include="CSVParser\RelevateUser.cs" />
-    <Compile Include="CSVParser\RelevateFileLoader.cs" />
+    <Compile Include="CSVParser\CsvFileLoader.cs" />
     <Compile Include="CSVParser\RelevateUserMapper.cs" />
     <Compile Include="CustomItems\CustomProfiles\RelevateProfileItem.base.cs" />
     <Compile Include="CustomItems\RelevateImport\RelevateImportSettingsItem.base.cs" />
