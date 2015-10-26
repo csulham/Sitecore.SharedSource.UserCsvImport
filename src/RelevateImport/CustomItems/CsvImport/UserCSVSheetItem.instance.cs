@@ -6,6 +6,10 @@ using RelevateImport.CSVParser;
 using RelevateImport.Downloader;
 using RelevateImport.Membership;
 using Sitecore;
+using Sitecore.Configuration;
+using Sitecore.Data;
+using Sitecore.Data.Managers;
+using Sitecore.Data.Templates;
 using Sitecore.Diagnostics;
 using Sitecore.SecurityModel;
 
@@ -40,7 +44,8 @@ namespace RelevateImport.CustomItems.CsvImport
 
 			if (LastUpdated.DateTime != DateTime.MinValue && LastUpdated.DateTime >= loader.CsvFile.LastWriteTime)
 			{
-				Log.Info(string.Format("File {0} not modified since the last import was run", FileName.Raw), this);
+				Log.Info(string.Format("File {0} not modified since the last import was run. Skipping UserCsvSheet item {1}.", FileName.Raw, this.Name), this);
+				return;
 			}
 
 			// Load the File
@@ -53,7 +58,7 @@ namespace RelevateImport.CustomItems.CsvImport
 			DateTime editStartTime = loader.CsvFile.LastWriteTime;
 
 			// Load the users
-			var um = new UserManager(Role.Raw);
+			var um = new UserManager(Role.Raw, CustomProfileItem);
 			um.CreateUsers(users.ToList());
 
 			// Update the File Date
@@ -69,7 +74,7 @@ namespace RelevateImport.CustomItems.CsvImport
 		{
 			foreach (var map in mapped)
 			{
-				var user = new CsvUser("str_contact_id", new[] { "First_Name", "Last_Name" }, "EMail", map.Attributes);
+				var user = new CsvUser(IdentityFieldName.Raw, NameFields, EmailFieldName.Raw, map.Attributes);
 				if (string.IsNullOrEmpty(user.Identity))
 				{
 					Log.Debug("User contained no identity data. \nRow Data = " + map.DictionaryData, this);
@@ -82,6 +87,38 @@ namespace RelevateImport.CustomItems.CsvImport
 				}
 
 				yield return user;
+			}
+		}
+
+		private Sitecore.Data.Items.Item _profileItem;
+		public Sitecore.Data.Items.Item CustomProfileItem
+		{
+			get
+			{
+				if (_profileItem == null)
+				{
+					Database core = Factory.GetDatabase("core");
+					_profileItem = core.GetItem(CustomProfile.Raw);
+				}
+				return _profileItem;
+			}
+		}
+
+		private string[] _nameFields;
+		public string[] NameFields
+		{
+			get
+			{
+				if (_nameFields == null)
+				{
+					if (string.IsNullOrEmpty(FullNameFieldNames.Raw))
+					{
+						Log.Warn("Full Name fields not defined for UserCsvSheet item " + this.Name, this);
+						_nameFields = new string[] {};
+					}
+					_nameFields = FullNameFieldNames.Raw.Split(',').Where(s => !string.IsNullOrEmpty(s)).Select(s => s.Trim()).ToArray();
+				}
+				return _nameFields;
 			}
 		}
 

@@ -15,7 +15,7 @@ name: Type
 key: type
 content-length: 8
 
-Droplist
+Droplink
 ----field----
 field: {1EB8AE32-E190-44A6-968D-ED904C794EBF}
 name: Source
@@ -61,7 +61,7 @@ content-length: 3
 ----version----
 language: en
 version: 1
-revision: 1f7b85ae-c872-48fa-af8d-cc8b0edb5055
+revision: e879e28f-ce28-4fb9-8d33-a4dbea7eac22
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -76,14 +76,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-1f7b85ae-c872-48fa-af8d-cc8b0edb5055
+e879e28f-ce28-4fb9-8d33-a4dbea7eac22
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 34
 
-20151024T153300:635812975807248479
+20151025T203712:635814022320452597
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

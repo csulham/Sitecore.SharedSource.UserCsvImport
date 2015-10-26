@@ -2,9 +2,9 @@
 version: 1
 id: {AC55DDA5-6B28-42DF-9F87-32569983573A}
 database: core
-path: /sitecore/templates/System/Security/Custom Profiles/HotDeals Profile/Relevate Profile Data/Relevate Email
+path: /sitecore/templates/System/Security/Custom Profiles/HotDeals Profile/Relevate Profile Data/EMail
 parent: {2B7C085F-959F-4AF3-8DBE-94E2B5C80BC2}
-name: Relevate Email
+name: EMail
 master: {00000000-0000-0000-0000-000000000000}
 template: {455A3E98-A627-4B40-8035-E683A0331AC7}
 templatekey: Template field
@@ -26,15 +26,22 @@ content-length: 3
 ----version----
 language: en
 version: 1
-revision: 3075a912-45d2-412e-ab6c-15ddf81ecf6b
+revision: 182aab0d-8a79-4e78-82e2-1652fb319168
 
+----field----
+field: {19A69332-A23E-4E70-8D16-B2640CB24CC8}
+name: Title
+key: title
+content-length: 5
+
+Email
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
 key: __display name
-content-length: 5
+content-length: 0
 
-Email
+
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -62,14 +69,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-3075a912-45d2-412e-ab6c-15ddf81ecf6b
+182aab0d-8a79-4e78-82e2-1652fb319168
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 34
 
-20151012T121552:635802489525775744
+20151025T201257:635814007779092302
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

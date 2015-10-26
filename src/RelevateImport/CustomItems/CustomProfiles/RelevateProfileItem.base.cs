@@ -9,7 +9,7 @@ namespace RelevateImport.CustomItems.CustomProfiles
 		/// <summary>
 		/// The ID of the profile item in the Core DB.
 		/// </summary>
-		public static readonly string ProfileId = "{61C888DB-68C2-4677-BDF4-390F7AC86D9A}";
+		//public static readonly string ProfileId = "{61C888DB-68C2-4677-BDF4-390F7AC86D9A}";
 
 		public static readonly string ContactIdFieldName = "Contact Id";
 		public static readonly string FirstNameFieldName = "First Name";

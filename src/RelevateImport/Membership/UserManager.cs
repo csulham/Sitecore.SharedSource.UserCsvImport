@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 using System.Web.Security;
 using RelevateImport.CSVParser;
 using RelevateImport.CustomItems.CustomProfiles;
+using Sitecore.Data;
+using Sitecore.Data.Items;
+using Sitecore.Data.Managers;
+using Sitecore.Data.Templates;
 using Sitecore.Diagnostics;
 using Sitecore.Security.Accounts;
 
@@ -14,15 +18,24 @@ namespace RelevateImport.Membership
 	public class UserManager
 	{
 		private readonly string _roleName;
+		private readonly string _identityFieldName;
+		private readonly string _emailFieldName;
+		private string[] _fullNameFieldNames;
+		private Item _customProfileItem;
 		private Sitecore.Security.Accounts.Role UserRole { get; set; }
 
-		public UserManager(string role)
+		public UserManager(string role, Item profile)
 		{
 			if (string.IsNullOrEmpty(role))
 			{
 				throw new ArgumentException("Role must be specified.");
 			}
+			if (profile == null)
+			{
+				throw new ArgumentException("Custom profile Item must be provided.");
+			}
 			_roleName = AddDomain(role);
+			_customProfileItem = profile;
 		}
 
 		public void CreateUsers(List<CsvUser> users)
@@ -96,7 +109,7 @@ namespace RelevateImport.Membership
 
 				// User does not exist so create it
 				var newUser = User.Create(userName, RelevateSettings.DefaultUserPassword);
-				newUser.Profile.ProfileItemId = RelevateProfileItem.ProfileId;
+				newUser.Profile.ProfileItemId = _customProfileItem.ID.ToString();
 				newUser.Profile.Save();
 				return newUser;
 			}
@@ -107,20 +120,32 @@ namespace RelevateImport.Membership
 			}
 		}
 
+
+		public IEnumerable<string> GetProfileFields()
+		{
+			Template profileTemplate = TemplateManager.GetTemplate(_customProfileItem);
+			return profileTemplate.GetFields(false).Select(f => f.Name);
+		}
+
 		private void UpdateProfile(User user, CsvUser csvUser)
 		{
 			user.Profile.Email = csvUser.Email;
 			user.Profile.FullName = csvUser.Name;
-			/*
-			user.Profile.SetCustomProperty(RelevateProfileItem.ContactIdFieldName, relevateUser.ContactId.Trim());
-			user.Profile.SetCustomProperty(RelevateProfileItem.FirstNameFieldName, relevateUser.FirstName.Trim());
-			user.Profile.SetCustomProperty(RelevateProfileItem.LastNameFieldName, relevateUser.LastName.Trim());
-			user.Profile.SetCustomProperty(RelevateProfileItem.EmailFieldName, relevateUser.Email.Trim());
-			user.Profile.SetCustomProperty(RelevateProfileItem.ZipCodeFieldName, relevateUser.ZipCode.Trim());
-			user.Profile.SetCustomProperty(RelevateProfileItem.PromoCodeFieldName, relevateUser.PromoCode.Trim());
-			user.Profile.SetCustomProperty(RelevateProfileItem.ChannelFieldName, relevateUser.Channel.Trim());
-			user.Profile.SetCustomProperty(RelevateProfileItem.SegmentNameFieldName, relevateUser.SegmentName.Trim());
-			*/
+
+			foreach (string profileField in GetProfileFields())
+			{
+				if (string.IsNullOrEmpty(profileField))
+				{
+					continue;
+				}
+
+				if (!csvUser.ProfileProperties.ContainsKey(profileField))
+				{
+					Log.Warn(string.Format("User profile property {0} was not set for user {1} {2}.", profileField, csvUser.Identity, csvUser.Name), this);
+				}
+				user.Profile.SetCustomProperty(profileField, csvUser.ProfileProperties[profileField]);
+			}
+			
 			user.Profile.Save();
 		}
 

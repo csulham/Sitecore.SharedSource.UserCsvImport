@@ -1,10 +1,10 @@
 ----item----
 version: 1
-id: {443258B8-0FAF-40D5-8D51-D76FED041799}
+id: {010CD1F8-E3C4-45D9-AD61-B7EEAEBE04D2}
 database: core
-path: /sitecore/templates/System/Security/Custom Profiles/HotDeals Profile/Relevate Profile Data/Contact Id
+path: /sitecore/templates/System/Security/Custom Profiles/HotDeals Profile/Relevate Profile Data/Promo_Code
 parent: {2B7C085F-959F-4AF3-8DBE-94E2B5C80BC2}
-name: Contact Id
+name: Promo_Code
 master: {00000000-0000-0000-0000-000000000000}
 template: {455A3E98-A627-4B40-8035-E683A0331AC7}
 templatekey: Template field
@@ -22,12 +22,19 @@ name: __Sortorder
 key: __sortorder
 content-length: 3
 
-100
+600
 ----version----
 language: en
 version: 1
-revision: 257e5d59-9b1c-441c-851a-ead1b2b727d2
+revision: 40dfd0e5-f364-4df6-a90f-f34e06e28444
 
+----field----
+field: {19A69332-A23E-4E70-8D16-B2640CB24CC8}
+name: Title
+key: title
+content-length: 10
+
+Promo Code
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -41,7 +48,7 @@ name: __Created
 key: __created
 content-length: 15
 
-20151012T114528
+20151012T114529
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -55,14 +62,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-257e5d59-9b1c-441c-851a-ead1b2b727d2
+40dfd0e5-f364-4df6-a90f-f34e06e28444
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 34
 
-20151012T121513:635802489139199806
+20151025T201314:635814007942498641
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
