@@ -27,7 +27,7 @@ namespace RelevateImport.CustomItems.CsvImport
 			}
 		}
 
-		public void ImportUsersFromCsv()
+		public void ImportUsersFromCsv(bool ignoreDate, UserImportStatus statusObject)
 		{
 			// Check parameters
 			if (string.IsNullOrEmpty(CsvFileFullPath))
@@ -45,7 +45,10 @@ namespace RelevateImport.CustomItems.CsvImport
 			if (LastUpdated.DateTime != DateTime.MinValue && LastUpdated.DateTime >= loader.CsvFile.LastWriteTime)
 			{
 				Log.Info(string.Format("File {0} not modified since the last import was run. Skipping UserCsvSheet item {1}.", FileName.Raw, this.Name), this);
-				return;
+				if (!ignoreDate)
+				{
+					return;
+				}
 			}
 
 			// Load the File
@@ -58,7 +61,7 @@ namespace RelevateImport.CustomItems.CsvImport
 			DateTime editStartTime = loader.CsvFile.LastWriteTime;
 
 			// Load the users
-			var um = new UserManager(Role.Raw, CustomProfileItem);
+			var um = new UserManager(Role.Raw, CustomProfileItem, statusObject);
 			um.CreateUsers(users.ToList());
 
 			// Update the File Date

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using RelevateImport.CustomItems.CsvImport;
+using RelevateImport.Membership;
 using Sitecore.Diagnostics;
 
 namespace RelevateImport.CustomSitecore
@@ -39,7 +40,7 @@ namespace RelevateImport.CustomSitecore
 
 					// Process the file
 					LogDebug(string.Format("START: Loading users from CSV {0}.", sheet.CsvFileFullPath));
-					sheet.ImportUsersFromCsv();
+					sheet.ImportUsersFromCsv(false,new UserImportStatus());
 					LogDebug(string.Format("END: Loaded users from CSV {0}.", sheet.CsvFileFullPath));
 
 					LogDebug(string.Format("END: Processed item {0}.", sheet.Name));

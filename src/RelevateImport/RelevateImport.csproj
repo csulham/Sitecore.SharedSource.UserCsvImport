@@ -71,9 +71,13 @@
     <Compile Include="CustomItems\CsvImport\UserCSVSheetItem.static.cs">
       <DependentUpon>UserCSVSheetItem.base.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomSitecore\Forms\CsvUserImportForm.cs" />
     <Compile Include="CustomSitecore\LoadCsvButtonAction.cs" />
     <Compile Include="CustomSitecore\RelevateUserImportAgent.cs" />
+    <Compile Include="CustomSitecore\UserImportManager.cs" />
     <Compile Include="Downloader\FtpFileDownloader.cs" />
+    <Compile Include="Membership\UserImportOptions.cs" />
+    <Compile Include="Membership\UserImportStatus.cs" />
     <Compile Include="Membership\UserManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RelevateSettings.cs" />

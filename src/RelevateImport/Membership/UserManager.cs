@@ -24,7 +24,14 @@ namespace RelevateImport.Membership
 		private Item _customProfileItem;
 		private Sitecore.Security.Accounts.Role UserRole { get; set; }
 
-		public UserManager(string role, Item profile)
+		public UserImportStatus Status { get; private set; }
+
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="role">The role name to add to users processed.</param>
+		/// <param name="profile">The Custom Profile item from the Core DB to use for the user's profile.</param>
+		public UserManager(string role, Item profile, UserImportStatus status)
 		{
 			if (string.IsNullOrEmpty(role))
 			{
@@ -36,10 +43,14 @@ namespace RelevateImport.Membership
 			}
 			_roleName = AddDomain(role);
 			_customProfileItem = profile;
+
+			Status = status;
 		}
 
 		public void CreateUsers(List<CsvUser> users)
 		{
+			Status.TotalUserCount = users.Count;
+			Status.UsersProcessed = 0;
 			foreach (CsvUser user in users)
 			{
 				try
@@ -48,7 +59,11 @@ namespace RelevateImport.Membership
 				}
 				catch (Exception e)
 				{
-					Log.Error("Error creating user.", e, typeof(UserManager));
+					Log.Error("Error creating user.", e, typeof (UserManager));
+				}
+				finally
+				{
+					Status.UsersProcessed++;
 				}
 			}
 		}
@@ -111,6 +126,7 @@ namespace RelevateImport.Membership
 				var newUser = User.Create(userName, RelevateSettings.DefaultUserPassword);
 				newUser.Profile.ProfileItemId = _customProfileItem.ID.ToString();
 				newUser.Profile.Save();
+				Log.Info(string.Format("User {0} created.", newUser.Name), this);
 				return newUser;
 			}
 			catch (Exception ex)
