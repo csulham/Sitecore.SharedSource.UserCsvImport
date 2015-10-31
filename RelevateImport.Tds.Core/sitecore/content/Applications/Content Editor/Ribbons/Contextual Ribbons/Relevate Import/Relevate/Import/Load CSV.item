@@ -20,9 +20,9 @@ Database/32x32/user_add.png
 field: {DBBF9EE3-C30E-4456-A81F-ED8C2E8DF91B}
 name: Click
 key: click
-content-length: 22
+content-length: 34
 
-relevateimport:loadcsv
+relevateimport:loadcsv(id=$Target)
 ----field----
 field: {1193B1A3-0148-413F-A979-49B39AA4A2AF}
 name: ID
@@ -33,7 +33,7 @@ RelevateImport
 ----version----
 language: en
 version: 1
-revision: bf9a8a06-b7bf-4467-b0e5-08e8e14c604c
+revision: 9dc8c3c7-e740-4926-bd69-f36df89add4c
 
 ----field----
 field: {4DF6DA21-E745-444C-956E-1D4A96AB8821}
@@ -76,14 +76,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-bf9a8a06-b7bf-4467-b0e5-08e8e14c604c
+9dc8c3c7-e740-4926-bd69-f36df89add4c
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 34
 
-20151011T131045:635801658454674729
+20151028T175136:635816514961000872
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
