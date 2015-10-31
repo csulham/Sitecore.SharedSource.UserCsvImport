@@ -36,6 +36,9 @@
     <Reference Include="CustomItemGenerator">
       <HintPath>..\..\lib\CustomItemGenerator.dll</HintPath>
     </Reference>
+    <Reference Include="Renci.SshNet">
+      <HintPath>..\..\packages\SSH.NET.2013.4.7\lib\net40\Renci.SshNet.dll</HintPath>
+    </Reference>
     <Reference Include="Sitecore.Kernel">
       <HintPath>..\..\lib\Sitecore\Sitecore.Kernel.dll</HintPath>
     </Reference>
@@ -75,6 +78,9 @@
     <Compile Include="CustomSitecore\LoadCsvButtonAction.cs" />
     <Compile Include="CustomSitecore\RelevateUserImportAgent.cs" />
     <Compile Include="CustomSitecore\UserImportManager.cs" />
+    <Compile Include="Downloader\FileDownloaderFactory.cs" />
+    <Compile Include="Downloader\IFileDownloader.cs" />
+    <Compile Include="Downloader\SshFileDownloader.cs" />
     <Compile Include="Downloader\FtpFileDownloader.cs" />
     <Compile Include="Membership\UserImportOptions.cs" />
     <Compile Include="Membership\UserImportStatus.cs" />

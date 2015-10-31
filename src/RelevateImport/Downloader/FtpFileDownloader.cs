@@ -6,7 +6,7 @@ using Sitecore.Diagnostics;
 
 namespace RelevateImport.Downloader
 {
-	public class FtpFileDownloader
+	public class FtpFileDownloader : IFileDownloader
 	{
 		public FtpFileDownloader(string hostname, string username, string password, int port = 21)
 		{

@@ -125,10 +125,10 @@ namespace RelevateImport.CustomItems.CsvImport
 			}
 		}
 
-		public void DownloadLatestCsv()
+		public bool DownloadLatestCsv()
 		{
-			FtpFileDownloader ftp = new FtpFileDownloader(RelevateSettings.FtpHostname, RelevateSettings.FtpUsername, RelevateSettings.FtpPassword);
-			ftp.TryGetFileFromFtp(FileName.Raw, LastUpdated.DateTime);
+			IFileDownloader downloader = FileDownloaderFactory.GetDownloader();
+			return downloader.TryGetFileFromFtp(FileName.Raw, LastUpdated.DateTime);
 		}
 	}
 }
