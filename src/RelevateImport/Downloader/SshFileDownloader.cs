@@ -24,9 +24,8 @@ namespace RelevateImport.Downloader
 
 		public bool TryGetFileFromFtp(string fileName, DateTime lastUpdated)
 		{
-			if (string.IsNullOrEmpty(fileName))
+			if (!DirectoryUtil.VerifyDirectory(fileName))
 			{
-				Log.Error("Cannot download a file with no name.", this);
 				return false;
 			}
 

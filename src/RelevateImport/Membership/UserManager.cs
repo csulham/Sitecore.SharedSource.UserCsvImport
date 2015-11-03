@@ -99,6 +99,7 @@ namespace RelevateImport.Membership
 			{
 				if (!Sitecore.Security.Accounts.Role.Exists(_roleName))
 				{
+					Log.Debug("Creating role " + _roleName, this);
 					System.Web.Security.Roles.CreateRole(_roleName);
 				}
 				return Role.FromName(_roleName);
@@ -118,7 +119,7 @@ namespace RelevateImport.Membership
 				foreach (System.Web.Security.MembershipUser mUser in
 					System.Web.Security.Membership.FindUsersByName(userName))
 				{
-					// have to authenticate to edit profiles
+					// have to pass authenticate param to edit profiles
 					return User.FromName(mUser.UserName, true);
 				}
 
@@ -145,9 +146,13 @@ namespace RelevateImport.Membership
 
 		private void UpdateProfile(User user, CsvUser csvUser)
 		{
-			user.Profile.Email = csvUser.Email;
-			user.Profile.FullName = csvUser.Name;
-
+			Log.Debug("Processing user " + user.Name, this);
+			if (user.Profile.UserName != csvUser.Email || user.Profile.Email != csvUser.Email)
+			{
+				user.Profile.Email = csvUser.Email;
+				user.Profile.FullName = csvUser.Name;
+			}
+			
 			foreach (string profileField in GetProfileFields())
 			{
 				if (string.IsNullOrEmpty(profileField))
@@ -159,10 +164,16 @@ namespace RelevateImport.Membership
 				{
 					Log.Warn(string.Format("User profile property {0} was not set for user {1} {2}.", profileField, csvUser.Identity, csvUser.Name), this);
 				}
-				user.Profile.SetCustomProperty(profileField, csvUser.ProfileProperties[profileField]);
+				if (user.Profile.GetCustomProperty(profileField) != csvUser.ProfileProperties[profileField])
+				{
+					user.Profile.SetCustomProperty(profileField, csvUser.ProfileProperties[profileField]);
+				}
 			}
-			
-			user.Profile.Save();
+
+			if (user.Profile.IsDirty)
+			{
+				user.Profile.Save();
+			}
 		}
 
 		/// <summary>

@@ -55,7 +55,7 @@ namespace RelevateImport.CustomSitecore
 
 				if (options.DownloadLatestFile)
 				{
-					//userCsvSheetItem.DownloadLatestCsv();
+					userCsvSheetItem.DownloadLatestCsv();
 				}
 				FileInfo file = new FileInfo(userCsvSheetItem.CsvFileFullPath);
 				if (!file.Exists)

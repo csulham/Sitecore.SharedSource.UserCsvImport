@@ -23,11 +23,11 @@ namespace RelevateImport.Downloader
 
 		public bool TryGetFileFromFtp(string fileName, DateTime lastUpdated)
 		{
-			if (string.IsNullOrEmpty(fileName))
+			if (!DirectoryUtil.VerifyDirectory(fileName))
 			{
-				Log.Error("Cannot download a file with no name.", this);
 				return false;
 			}
+			var outputPath = string.Format("{0}\\{1}", RelevateSettings.CsvFolderPath, fileName);
 
 			var fileToDownload = string.Format("ftp://{0}/{1}", Hostname, fileName);
 
@@ -64,7 +64,6 @@ namespace RelevateImport.Downloader
 					Log.Debug("Getting response from FTP server...");
 					using (var responseStream = response.GetResponseStream())
 					{
-						var outputPath = string.Format("{0}\\{1}", RelevateSettings.CsvFolderPath, fileName);
 						Log.Debug(string.Format("Downloading file {0} and saving to path {1}.", fileName, outputPath));
 						using (var fileStream = new FileStream(outputPath, FileMode.Create, FileAccess.Write))
 						{

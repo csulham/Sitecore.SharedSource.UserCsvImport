@@ -43,7 +43,7 @@ namespace RelevateImport.CSVParser
 			}
 			catch (Exception fl)
 			{
-				Log.Error("An error occured loading the CSV file " + CsvFilePath, fl, typeof(RelevateUserMapper));
+				Log.Error("An error occured loading the CSV file " + CsvFilePath, fl, this);
 				throw;
 			}
 		}
