@@ -1,9 +1,8 @@
 ﻿using System;
-using Sitecore;
 using Sitecore.Diagnostics;
 using Sitecore.Jobs;
 
-namespace UserCsvImport.Membership
+namespace Sitecore.SharedSource.UserCsvImport.Membership
 {
 	public class UserImportStatus
 	{

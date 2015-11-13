@@ -1,34 +1,16 @@
-﻿using Sitecore;
-using Sitecore.Collections;
+﻿using System;
 using Sitecore.Configuration;
-using Sitecore.Data;
-using Sitecore.Data.Items;
-using Sitecore.Data.Managers;
 using Sitecore.Diagnostics;
-using Sitecore.Extensions;
 using Sitecore.Globalization;
 using Sitecore.Jobs;
-using Sitecore.Pipelines;
-using Sitecore.Publishing;
-using Sitecore.Security.AccessControl;
-using Sitecore.Security.Accounts;
-using Sitecore.SecurityModel;
-using Sitecore.Shell;
-using Sitecore.Text;
+using Sitecore.SharedSource.UserCsvImport.CustomItems.CsvImport;
+using Sitecore.SharedSource.UserCsvImport.Membership;
 using Sitecore.Web;
 using Sitecore.Web.UI.HtmlControls;
 using Sitecore.Web.UI.Pages;
 using Sitecore.Web.UI.Sheer;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web.UI;
-using System.Web.UI.HtmlControls;
-using UserCsvImport.CustomItems.CsvImport;
-using UserCsvImport.Membership;
 
-namespace UserCsvImport.CustomSitecore.Forms
+namespace Sitecore.SharedSource.UserCsvImport.CustomSitecore.Forms
 {
 	public class CsvUserImportForm : WizardForm
 	{

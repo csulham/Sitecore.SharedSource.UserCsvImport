@@ -2,12 +2,10 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using CsvHelper;
 using Sitecore.Diagnostics;
 
-namespace UserCsvImport.CSVParser
+namespace Sitecore.SharedSource.UserCsvImport.CSVParser
 {
 	public class CsvFileLoader
 	{

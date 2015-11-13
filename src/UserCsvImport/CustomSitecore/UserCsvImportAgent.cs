@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UserCsvImport.CustomItems.CsvImport;
-using UserCsvImport.Membership;
 using Sitecore.Diagnostics;
+using Sitecore.SharedSource.UserCsvImport.CustomItems.CsvImport;
+using Sitecore.SharedSource.UserCsvImport.Membership;
 
-namespace UserCsvImport.CustomSitecore
+namespace Sitecore.SharedSource.UserCsvImport.CustomSitecore
 {
 	public class UserCsvImportAgent : Sitecore.Tasks.BaseAgent
 	{

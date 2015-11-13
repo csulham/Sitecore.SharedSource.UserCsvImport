@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using CsvHelper.Configuration;
 
-namespace UserCsvImport.CSVParser
+namespace Sitecore.SharedSource.UserCsvImport.CSVParser
 {
 	public class DictionaryMapped
 	{

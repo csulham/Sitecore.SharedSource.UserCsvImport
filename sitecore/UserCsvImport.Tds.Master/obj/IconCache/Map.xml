@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ItemIconCache>
+  <Item ItemPath="/sitecore/system" ItemIcon="/temp/IconCache/People/16x16/workstation1.png" />
+  <Item ItemPath="/sitecore/templates" ItemIcon="/temp/IconCache/Applications/16x16/form_blue.png" />
+  <Item ItemPath="/sitecore/system/Modules" ItemIcon="/temp/IconCache/Software/16x16/jar.png" />
+  <Item ItemPath="/sitecore/system/Modules/User Csv Importer" ItemIcon="/temp/IconCache/People/32x32/users4_add.png" />
+  <Item ItemPath="/sitecore/system/Modules/User Csv Importer/User Csv Sheets" ItemIcon="/temp/IconCache/Applications/16x16/folder.png" />
+  <Item ItemPath="/sitecore/templates/User Defined" ItemIcon="/temp/IconCache/Applications/16x16/folder.png" />
+  <Item ItemPath="/sitecore/templates/User Defined/Csv Import" ItemIcon="/temp/IconCache/Applications/16x16/folder.png" />
+  <Item ItemPath="/sitecore/templates/User Defined/Csv Import/User CSV Sheet" ItemIcon="/temp/IconCache/Business/32x32/table.png" />
+  <Item ItemPath="/sitecore/templates/User Defined/Csv Import/User CSV Sheet/__Standard Values" ItemIcon="/temp/IconCache/Business/32x32/table.png" />
+  <Item ItemPath="/sitecore/templates/User Defined/Csv Import/User CSV Sheet/CSV Data" ItemIcon="/temp/IconCache/Applications/32x32/Document.png" />
+  <Item ItemPath="/sitecore/templates/User Defined/Csv Import/User CSV Sheet/CSV Data/File Name" ItemIcon="/temp/IconCache/Applications/32x32/Document.png" />
+  <Item ItemPath="/sitecore/templates/User Defined/Csv Import/User CSV Sheet/CSV Data/Last Updated" ItemIcon="/temp/IconCache/Applications/32x32/Document.png" />
+  <Item ItemPath="/sitecore/templates/User Defined/Csv Import/User CSV Sheet/User Data" ItemIcon="/temp/IconCache/Applications/32x32/Document.png" />
+  <Item ItemPath="/sitecore/templates/User Defined/Csv Import/User CSV Sheet/User Data/Custom Profile" ItemIcon="/temp/IconCache/Applications/32x32/Document.png" />
+  <Item ItemPath="/sitecore/templates/User Defined/Csv Import/User CSV Sheet/User Data/Email Field Name" ItemIcon="/temp/IconCache/Applications/32x32/Document.png" />
+  <Item ItemPath="/sitecore/templates/User Defined/Csv Import/User CSV Sheet/User Data/Full Name Field Names" ItemIcon="/temp/IconCache/Applications/32x32/Document.png" />
+  <Item ItemPath="/sitecore/templates/User Defined/Csv Import/User CSV Sheet/User Data/Identity Field Name" ItemIcon="/temp/IconCache/Applications/32x32/Document.png" />
+  <Item ItemPath="/sitecore/templates/User Defined/Csv Import/User CSV Sheet/User Data/Role" ItemIcon="/temp/IconCache/Applications/32x32/Document.png" />
+</ItemIconCache>

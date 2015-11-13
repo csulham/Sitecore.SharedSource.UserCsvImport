@@ -1,23 +1,13 @@
-﻿using System;
-using Sitecore;
-using Sitecore.Configuration;
+﻿using Sitecore.Configuration;
 using Sitecore.Data.Items;
 using Sitecore.Diagnostics;
-using Sitecore.Text;
 using Sitecore.Shell.Framework.Commands;
+using Sitecore.Text;
 
-namespace UserCsvImport.CustomSitecore
+namespace Sitecore.SharedSource.UserCsvImport.CustomSitecore
 {
 	public class LoadCsvButtonAction : Sitecore.Shell.Framework.Commands.Command
 	{
-		/*
-		public override void Execute(CommandContext context)
-		{
-			UserCSVSheetItem userCsvSheet = context.Items[0];
-			userCsvSheet.ImportUsersFromCsv();
-
-		}*/
-
 		/// <summary>
 		/// Executes the command in the specified context.
 		/// 

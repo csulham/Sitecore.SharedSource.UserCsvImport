@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Sitecore.Data;
-
-namespace UserCsvImport.Membership
+﻿namespace Sitecore.SharedSource.UserCsvImport.Membership
 {
 	public class UserImportOptions
 	{

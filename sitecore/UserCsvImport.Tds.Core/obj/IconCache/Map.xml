@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ItemIconCache>
+  <Item ItemPath="/sitecore/content" ItemIcon="/temp/IconCache/People/16x16/cubes_blue.png" />
+  <Item ItemPath="/sitecore/content/Applications" ItemIcon="/temp/IconCache/Software/16x16/application.png" />
+  <Item ItemPath="/sitecore/content/Applications/Content Editor" ItemIcon="/sitecore/shell/themes/standard/People/16x16/cubes_blue.png" />
+  <Item ItemPath="/sitecore/content/Applications/Content Editor/Ribbons" ItemIcon="/temp/IconCache/Control/16x16/menu_b.png" />
+  <Item ItemPath="/sitecore/content/Applications/Content Editor/Ribbons/Contextual Ribbons" ItemIcon="/temp/IconCache/Applications/16x16/folder.png" />
+  <Item ItemPath="/sitecore/content/Applications/Content Editor/Ribbons/Contextual Ribbons/User CSV Import" ItemIcon="/temp/IconCache/Applications/32x32/Document.png" />
+  <Item ItemPath="/sitecore/content/Applications/Content Editor/Ribbons/Contextual Ribbons/User CSV Import/User Import" ItemIcon="/temp/IconCache/Applications/32x32/Document.png" />
+  <Item ItemPath="/sitecore/content/Applications/Content Editor/Ribbons/Contextual Ribbons/User CSV Import/User Import/Import" ItemIcon="/temp/IconCache/Applications/32x32/Document.png" />
+  <Item ItemPath="/sitecore/content/Applications/Content Editor/Ribbons/Contextual Ribbons/User CSV Import/User Import/Import/Load CSV" ItemIcon="/temp/IconCache/Applications/32x32/Document.png" />
+</ItemIconCache>

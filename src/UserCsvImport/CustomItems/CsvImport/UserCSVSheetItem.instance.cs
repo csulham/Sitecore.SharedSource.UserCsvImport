@@ -2,18 +2,15 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using UserCsvImport.CSVParser;
-using UserCsvImport.Downloader;
-using UserCsvImport.Membership;
-using Sitecore;
 using Sitecore.Configuration;
 using Sitecore.Data;
-using Sitecore.Data.Managers;
-using Sitecore.Data.Templates;
 using Sitecore.Diagnostics;
 using Sitecore.SecurityModel;
+using Sitecore.SharedSource.UserCsvImport.CSVParser;
+using Sitecore.SharedSource.UserCsvImport.Downloader;
+using Sitecore.SharedSource.UserCsvImport.Membership;
 
-namespace UserCsvImport.CustomItems.CsvImport
+namespace Sitecore.SharedSource.UserCsvImport.CustomItems.CsvImport
 {
 	public partial class UserCSVSheetItem
 	{

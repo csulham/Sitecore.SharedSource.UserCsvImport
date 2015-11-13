@@ -2,10 +2,9 @@
 using System.IO;
 using System.Net;
 using Renci.SshNet;
-using Sitecore;
 using Sitecore.Diagnostics;
 
-namespace UserCsvImport.Downloader
+namespace Sitecore.SharedSource.UserCsvImport.Downloader
 {
 	public class SshFileDownloader : IFileDownloader
 	{

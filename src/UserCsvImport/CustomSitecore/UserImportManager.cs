@@ -1,16 +1,13 @@
 ﻿using System;
 using System.IO;
 using System.Threading;
-using UserCsvImport.CustomItems.CsvImport;
-using UserCsvImport.Membership;
-using Sitecore;
 using Sitecore.Configuration;
-using Sitecore.Data;
 using Sitecore.Diagnostics;
 using Sitecore.Jobs;
-using Sitecore.Publishing;
+using Sitecore.SharedSource.UserCsvImport.CustomItems.CsvImport;
+using Sitecore.SharedSource.UserCsvImport.Membership;
 
-namespace UserCsvImport.CustomSitecore
+namespace Sitecore.SharedSource.UserCsvImport.CustomSitecore
 {
 	public class UserImportManager
 	{

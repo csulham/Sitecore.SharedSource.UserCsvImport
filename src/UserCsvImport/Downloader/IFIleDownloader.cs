@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace UserCsvImport.Downloader
+namespace Sitecore.SharedSource.UserCsvImport.Downloader
 {
 	public interface IFileDownloader
 	{

@@ -1,10 +1,9 @@
 ﻿using System;
 using System.IO;
 using System.Net;
-using Sitecore;
 using Sitecore.Diagnostics;
 
-namespace UserCsvImport.Downloader
+namespace Sitecore.SharedSource.UserCsvImport.Downloader
 {
 	public class FtpFileDownloader : IFileDownloader
 	{

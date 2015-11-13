@@ -1,18 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Web.Security;
-using UserCsvImport.CSVParser;
-using Sitecore.Data;
 using Sitecore.Data.Items;
 using Sitecore.Data.Managers;
 using Sitecore.Data.Templates;
 using Sitecore.Diagnostics;
 using Sitecore.Security.Accounts;
+using Sitecore.SharedSource.UserCsvImport.CSVParser;
 
-namespace UserCsvImport.Membership
+namespace Sitecore.SharedSource.UserCsvImport.Membership
 {
 	public class UserManager
 	{
