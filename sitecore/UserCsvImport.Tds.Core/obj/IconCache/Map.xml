@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ItemIconCache>
+  <Item ItemPath="/sitecore/content" ItemIcon="/temp/IconCache/People/16x16/cubes_blue.png" />
+  <Item ItemPath="/sitecore/content/Applications" ItemIcon="/temp/IconCache/Software/16x16/application.png" />
+  <Item ItemPath="/sitecore/content/Applications/Content Editor" ItemIcon="/sitecore/shell/themes/standard/People/16x16/cubes_blue.png" />
+  <Item ItemPath="/sitecore/content/Applications/Content Editor/Ribbons" ItemIcon="/temp/IconCache/Control/16x16/menu_b.png" />
+  <Item ItemPath="/sitecore/content/Applications/Content Editor/Ribbons/Contextual Ribbons" ItemIcon="/temp/IconCache/Applications/16x16/folder.png" />
+  <Item ItemPath="/sitecore/content/Applications/Content Editor/Ribbons/Contextual Ribbons/Relevate Import" ItemIcon="/temp/IconCache/Applications/32x32/Document.png" />
+  <Item ItemPath="/sitecore/content/Applications/Content Editor/Ribbons/Contextual Ribbons/Relevate Import/Relevate" ItemIcon="/temp/IconCache/Applications/32x32/Document.png" />
+  <Item ItemPath="/sitecore/content/Applications/Content Editor/Ribbons/Contextual Ribbons/Relevate Import/Relevate/Import" ItemIcon="/temp/IconCache/Applications/32x32/Document.png" />
+  <Item ItemPath="/sitecore/content/Applications/Content Editor/Ribbons/Contextual Ribbons/Relevate Import/Relevate/Import/Load CSV" ItemIcon="/temp/IconCache/Applications/32x32/Document.png" />
+  <Item ItemPath="/sitecore/system" ItemIcon="/temp/IconCache/People/16x16/workstation1.png" />
+  <Item ItemPath="/sitecore/system/Settings" ItemIcon="/temp/IconCache/Applications/16x16/preferences.png" />
+  <Item ItemPath="/sitecore/system/Settings/Security" ItemIcon="/temp/IconCache/Applications/16x16/folder.png" />
+  <Item ItemPath="/sitecore/system/Settings/Security/Profiles" ItemIcon="/temp/IconCache/Applications/16x16/folder.png" />
+  <Item ItemPath="/sitecore/system/Settings/Security/Profiles/Relevate User" ItemIcon="/temp/IconCache/People/32x32/user1_earth.png" />
+  <Item ItemPath="/sitecore/templates" ItemIcon="/temp/IconCache/Software/16x16/component_yellow.png" />
+  <Item ItemPath="/sitecore/templates/System" ItemIcon="/temp/IconCache/Applications/16x16/folder_gear.png" />
+  <Item ItemPath="/sitecore/templates/System/Security" ItemIcon="/temp/IconCache/Applications/16x16/folder.png" />
+  <Item ItemPath="/sitecore/templates/System/Security/Custom Profiles" ItemIcon="/temp/IconCache/Applications/16x16/folder.png" />
+  <Item ItemPath="/sitecore/templates/System/Security/Custom Profiles/Relevate Profile" ItemIcon="/temp/IconCache/People/32x32/user1_earth.png" />
+  <Item ItemPath="/sitecore/templates/System/Security/Custom Profiles/Relevate Profile/Relevate Profile Data" ItemIcon="/temp/IconCache/Applications/32x32/Document.png" />
+  <Item ItemPath="/sitecore/templates/System/Security/Custom Profiles/Relevate Profile/Relevate Profile Data/Contact Id" ItemIcon="/temp/IconCache/Applications/32x32/Document.png" />
+  <Item ItemPath="/sitecore/templates/System/Security/Custom Profiles/Relevate Profile/Relevate Profile Data/First Name" ItemIcon="/temp/IconCache/Applications/32x32/Document.png" />
+  <Item ItemPath="/sitecore/templates/System/Security/Custom Profiles/Relevate Profile/Relevate Profile Data/Email" ItemIcon="/temp/IconCache/Applications/32x32/Document.png" />
+  <Item ItemPath="/sitecore/templates/System/Security/Custom Profiles/Relevate Profile/Relevate Profile Data/Last Name" ItemIcon="/temp/IconCache/Applications/32x32/Document.png" />
+  <Item ItemPath="/sitecore/templates/System/Security/Custom Profiles/Relevate Profile/Relevate Profile Data/Zip Code" ItemIcon="/temp/IconCache/Applications/32x32/Document.png" />
+  <Item ItemPath="/sitecore/templates/System/Security/Custom Profiles/Relevate Profile/Relevate Profile Data/Channel" ItemIcon="/temp/IconCache/Applications/32x32/Document.png" />
+  <Item ItemPath="/sitecore/templates/System/Security/Custom Profiles/Relevate Profile/Relevate Profile Data/Promo Code" ItemIcon="/temp/IconCache/Applications/32x32/Document.png" />
+  <Item ItemPath="/sitecore/templates/System/Security/Custom Profiles/Relevate Profile/Relevate Profile Data/Segment Name" ItemIcon="/temp/IconCache/Applications/32x32/Document.png" />
+  <Item ItemPath="/sitecore/templates/System/Security/Custom Profiles/Relevate Profile/Relevate Profile Data/Relevate Email" ItemIcon="/temp/IconCache/Applications/32x32/Document.png" />
+  <Item ItemPath="/sitecore/templates/System/Security/Custom Profiles/HotDeals Profile" ItemIcon="/temp/IconCache/People/32x32/user1_earth.png" />
+  <Item ItemPath="/sitecore/templates/System/Security/Custom Profiles/HotDeals Profile/Relevate Profile Data/Channel" ItemIcon="/temp/IconCache/Applications/32x32/Document.png" />
+  <Item ItemPath="/sitecore/templates/System/Security/Custom Profiles/HotDeals Profile/Relevate Profile Data/Contact Id" ItemIcon="/temp/IconCache/Applications/32x32/Document.png" />
+  <Item ItemPath="/sitecore/templates/System/Security/Custom Profiles/HotDeals Profile/Relevate Profile Data/First Name" ItemIcon="/temp/IconCache/Applications/32x32/Document.png" />
+  <Item ItemPath="/sitecore/templates/System/Security/Custom Profiles/HotDeals Profile/Relevate Profile Data/Last Name" ItemIcon="/temp/IconCache/Applications/32x32/Document.png" />
+  <Item ItemPath="/sitecore/templates/System/Security/Custom Profiles/HotDeals Profile/Relevate Profile Data/Promo Code" ItemIcon="/temp/IconCache/Applications/32x32/Document.png" />
+  <Item ItemPath="/sitecore/templates/System/Security/Custom Profiles/HotDeals Profile/Relevate Profile Data/Relevate Email" ItemIcon="/temp/IconCache/Applications/32x32/Document.png" />
+  <Item ItemPath="/sitecore/templates/System/Security/Custom Profiles/HotDeals Profile/Relevate Profile Data/Segment Name" ItemIcon="/temp/IconCache/Applications/32x32/Document.png" />
+  <Item ItemPath="/sitecore/templates/System/Security/Custom Profiles/HotDeals Profile/Relevate Profile Data/Zip Code" ItemIcon="/temp/IconCache/Applications/32x32/Document.png" />
+  <Item ItemPath="/sitecore/templates/System/Security/Custom Profiles/HotDeals Profile/Relevate Profile Data" ItemIcon="/temp/IconCache/Applications/32x32/Document.png" />
+  <Item ItemPath="/sitecore/system/Settings/Security/Profiles/HotDeals User" ItemIcon="/temp/IconCache/People/32x32/user1_earth.png" />
+  <Item ItemPath="/sitecore/templates/System/Security/Custom Profiles/HotDeals Profile/Relevate Profile Data/str_contact_id" ItemIcon="/temp/IconCache/Applications/32x32/Document.png" />
+  <Item ItemPath="/sitecore/templates/System/Security/Custom Profiles/HotDeals Profile/Relevate Profile Data/First_Name" ItemIcon="/temp/IconCache/Applications/32x32/Document.png" />
+  <Item ItemPath="/sitecore/templates/System/Security/Custom Profiles/HotDeals Profile/Relevate Profile Data/Last_Name" ItemIcon="/temp/IconCache/Applications/32x32/Document.png" />
+  <Item ItemPath="/sitecore/templates/System/Security/Custom Profiles/HotDeals Profile/Relevate Profile Data/Promo_Code" ItemIcon="/temp/IconCache/Applications/32x32/Document.png" />
+  <Item ItemPath="/sitecore/templates/System/Security/Custom Profiles/HotDeals Profile/Relevate Profile Data/EMail" ItemIcon="/temp/IconCache/Applications/32x32/Document.png" />
+  <Item ItemPath="/sitecore/templates/System/Security/Custom Profiles/HotDeals Profile/Relevate Profile Data/Zip_Code" ItemIcon="/temp/IconCache/Applications/32x32/Document.png" />
+  <Item ItemPath="/sitecore/content/Applications/Content Editor/Ribbons/Contextual Ribbons/User CSV Import" ItemIcon="/temp/IconCache/Applications/32x32/Document.png" />
+  <Item ItemPath="/sitecore/content/Applications/Content Editor/Ribbons/Contextual Ribbons/User CSV Import/User Import" ItemIcon="/temp/IconCache/Applications/32x32/Document.png" />
+  <Item ItemPath="/sitecore/content/Applications/Content Editor/Ribbons/Contextual Ribbons/User CSV Import/User Import/Import" ItemIcon="/temp/IconCache/Applications/32x32/Document.png" />
+  <Item ItemPath="/sitecore/content/Applications/Content Editor/Ribbons/Contextual Ribbons/User CSV Import/User Import/Import/Load CSV" ItemIcon="/temp/IconCache/Applications/32x32/Document.png" />
+</ItemIconCache>
