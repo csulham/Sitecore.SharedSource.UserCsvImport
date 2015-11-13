@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <control xmlns:def="Definition" xmlns="http://schemas.sitecore.net/Visual-Studio-Intellisense">
 	<CsvUserImport>
-		<WizardForm CodeBeside="RelevateImport.CustomSitecore.Forms.CsvUserImportForm,RelevateImport">
+		<WizardForm CodeBeside="UserCsvImport.CustomSitecore.Forms.CsvUserImportForm,UserCsvImport">
 			<Script Src="/sitecore/shell/Controls/Lib/jQuery/jQuery.noconflict.js"></Script>
 			<Script Src="/sitecore/shell/Applications/Dialogs/Publish/Publish.js"></Script>
 
