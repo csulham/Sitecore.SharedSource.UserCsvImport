@@ -40,12 +40,7 @@
 
 						
 					</Scrollbox>
-					<Border ID="NoChanges" Visible="false" Align="center" Padding="4px">
-						<ThemedImage Src="Applications/24x24/error.png" Width="16" Height="16" Align="absmiddle" Margin="0px 4px 0px 0px" />
-						<b>
-							<Literal Text="You cannot publish as no publishing targets are defined in this database." />
-						</b>
-					</Border>
+					
 				</WizardFormPadding>
 			</WizardFormPage>
 
@@ -63,7 +58,7 @@
 
 					<Space Height="16"/>
 					<Border ID="DownloadingText" Align="center" GridPanel.Align="center" GridPanel.Style="font-weight:bold">
-						<Literal Text="Downloading latest file from relevate..."/>
+						<Literal Text="Downloading latest file from ftp..."/>
 					</Border>
 					<Border ID="ImportingText" Align="center" GridPanel.Align="center" GridPanel.Style="font-weight:bold">
 						<Literal Text="Importing..."/>

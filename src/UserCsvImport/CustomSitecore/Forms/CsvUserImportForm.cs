@@ -38,9 +38,6 @@ namespace UserCsvImport.CustomSitecore.Forms
 		/// </summary>
 		protected Memo ErrorText;
 		
-		protected Border NoChanges;
-
-
 		protected Checkbox DownloadLatest;
 
 		protected Checkbox IgnoreFileDate;
@@ -249,62 +246,12 @@ namespace UserCsvImport.CustomSitecore.Forms
 				newpage = "Settings";
 			if (newpage == "Importing")
 			{
-				DownloadingText.Visible = DownloadLatest.Checked;				
+				DownloadingText.Visible = DownloadLatest.Checked;
+				DownloadingText.InnerHtml = string.Format("Downloading latest file from {0}...", UserCsvImportSettings.FtpHostname);
 			}
 			return base.ActivePageChanging(page, ref newpage);
 		}
-
-		/// <summary>
-		/// Confirms the publishing options.
-		/// 
-		/// </summary>
-		/// <param name="args">The args.</param>
-		//protected void ConfirmPublishingOptions(ClientPipelineArgs args)
-		//{
-		//	Assert.ArgumentNotNull((object)args, "args");
-		//	if (!args.HasResult)
-		//	{
-		//		bool checked1 = this.PublishChildren.Checked;
-		//		bool checked2 = this.PublishRelatedItems.Checked;
-		//		bool checked3 = this.Republish.Checked;
-		//		string str = string.Empty;
-		//		if (!string.IsNullOrEmpty(this.ItemID))
-		//		{
-		//			if (checked2 && checked1)
-		//				str = Translate.Text("You are about to publish the current item, its subitems, and related items.");
-		//			else if (checked2)
-		//				str = Translate.Text("You are about to publish the current item and its related items.");
-		//			else if (checked1)
-		//				str = Translate.Text("You are about to publish the current item and its subitems.");
-		//		}
-		//		else
-		//			str += Translate.Text("You are about to republish the whole database.");
-		//		if (checked3)
-		//		{
-		//			if (!string.IsNullOrEmpty(str))
-		//				str += "\n\n";
-		//			str += Translate.Text("Republishing is an expensive operation that overwrites every item in the selected languages, even if that data has not changed.\nYou should only republish if the databases appear to be inconsistent and only after you have tried to fix the problem by performing a Smart Publishing operation.");
-		//		}
-		//		if (!string.IsNullOrEmpty(str))
-		//		{
-		//			SheerResponse.Confirm(str + "\n\n" + Translate.Text("Do you want to proceed?"));
-		//			args.WaitForPostBack(true);
-		//		}
-		//		else
-		//		{
-		//			this.ConfirmedOptions = true;
-		//			this.Next();
-		//		}
-		//	}
-		//	else
-		//	{
-		//		if (!(args.Result == "yes"))
-		//			return;
-		//		this.ConfirmedOptions = true;
-		//		this.Next();
-		//	}
-		//}
-
+		
 		/// <summary>
 		/// Raises the load event.
 		/// 
@@ -328,16 +275,6 @@ namespace UserCsvImport.CustomSitecore.Forms
 				return;
 			this.ItemID = WebUtil.GetQueryString("id");
 			this.Database = WebUtil.GetQueryString("database");
-
-
-			//this.BuildPublishingTargets();
-			//this.BuildLanguages();
-			//this.BuildPublishTypes();
-			//this.IncrementalPublish.Checked = UserOptions.Publishing.IncrementalPublish;
-			//this.SmartPublish.Checked = UserOptions.Publishing.SmartPublish;
-			//this.Republish.Checked = UserOptions.Publishing.Republish;
-			//this.PublishChildren.Checked = UserOptions.Publishing.PublishChildren;
-			//this.PublishRelatedItems.Checked = UserOptions.Publishing.PublishRelatedItems;
 		}
 
 		/// <summary>
@@ -355,55 +292,12 @@ namespace UserCsvImport.CustomSitecore.Forms
 		{
 			if (DownloadLatest.Checked)
 			{
-			
+				// TODO: progress bar on downloader?
 			}
 			var handle = UserImportManager.ImportUsers(ItemID, Database, DownloadLatest.Checked, IgnoreFileDate.Checked);
 			this.JobHandle = handle.ToString();
 			SheerResponse.Timer("CheckStatus", 500);
 		}
 
-		/// <summary>
-		/// Starts the publisher.
-		/// 
-		/// </summary>
-		protected void StartPublisher()
-		{
-			//Language[] languages = GetLanguages();
-			//List<Item> publishingTargets = GetPublishingTargets();
-			//Database[] publishingTargetDatabases = GetPublishingTargetDatabases();
-			//bool b1 = Context.ClientPage.ClientRequest.Form["PublishMode"] == "IncrementalPublish";
-			//bool flag = Context.ClientPage.ClientRequest.Form["PublishMode"] == "SmartPublish";
-			//bool b2 = Context.ClientPage.ClientRequest.Form["PublishMode"] == "Republish";
-			//bool rebuild = this.Rebuild;
-			//bool checked1 = this.PublishChildren.Checked;
-			//bool checked2 = this.PublishRelatedItems.Checked;
-			//string str = this.ItemID;
-			//if (string.IsNullOrEmpty(str))
-			//	str = "null";
-			//string message;
-			//if (rebuild)
-			//	message = string.Format("Rebuild database, databases: {0}", (object)StringUtil.Join((IEnumerable)publishingTargetDatabases, ", "));
-			//else
-			//	message = string.Format("Publish, root: {0}, languages:{1}, targets:{2}, databases:{3}, incremental:{4}, smart:{5}, republish:{6}, children:{7}, related:{8}", (object)str, (object)StringUtil.Join((IEnumerable)languages, ", "), (object)StringUtil.Join((IEnumerable)publishingTargets, ", ", "Name"), (object)StringUtil.Join((IEnumerable)publishingTargetDatabases, ", "), (object)MainUtil.BoolToString(b1), (object)MainUtil.BoolToString(flag), (object)MainUtil.BoolToString(b2), (object)MainUtil.BoolToString(checked1), (object)MainUtil.BoolToString(checked2));
-			//Log.Audit(message, this.GetType());
-			//ListString listString1 = new ListString();
-			//foreach (Language language in languages)
-			//	listString1.Add(language.ToString());
-			//Registry.SetString("/Current_User/Publish/Languages", listString1.ToString());
-			//ListString listString2 = new ListString();
-			//foreach (Item obj in publishingTargets)
-			//	listString2.Add(obj.ID.ToString());
-			//Registry.SetString("/Current_User/Publish/Targets", listString2.ToString());
-			//UserOptions.Publishing.IncrementalPublish = b1;
-			//UserOptions.Publishing.SmartPublish = flag;
-			//UserOptions.Publishing.Republish = b2;
-			//UserOptions.Publishing.PublishChildren = checked1;
-			//UserOptions.Publishing.PublishRelatedItems = checked2;
-			//this.JobHandle = (string.IsNullOrEmpty(this.ItemID) ? (!b1 ? (!flag ? (!rebuild ? (object)PublishManager.Republish(Sitecore.Client.ContentDatabase, publishingTargetDatabases, languages, Context.Language) : (object)PublishManager.RebuildDatabase(Sitecore.Client.ContentDatabase, publishingTargetDatabases)) : (object)PublishManager.PublishSmart(Sitecore.Client.ContentDatabase, publishingTargetDatabases, languages, Context.Language)) : (object)PublishManager.PublishIncremental(Sitecore.Client.ContentDatabase, publishingTargetDatabases, languages, Context.Language)) : (object)PublishManager.PublishItem(Sitecore.Client.GetItemNotNull(this.ItemID), publishingTargetDatabases, languages, checked1, flag, checked2)).ToString();
-			//SheerResponse.Timer("CheckStatus", Settings.Publishing.PublishDialogPollingInterval);
-		}
-
-
-		
 	}
 }

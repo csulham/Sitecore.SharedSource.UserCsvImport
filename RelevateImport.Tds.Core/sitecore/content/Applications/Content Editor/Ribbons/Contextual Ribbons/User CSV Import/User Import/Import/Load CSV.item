@@ -2,7 +2,7 @@
 version: 1
 id: {085174B5-53AC-48B8-995C-7C166F7D82F8}
 database: core
-path: /sitecore/content/Applications/Content Editor/Ribbons/Contextual Ribbons/Relevate Import/Relevate/Import/Load CSV
+path: /sitecore/content/Applications/Content Editor/Ribbons/Contextual Ribbons/User CSV Import/User Import/Import/Load CSV
 parent: {1ECA1589-0560-4C4A-9F80-A978914BB65E}
 name: Load CSV
 master: {00000000-0000-0000-0000-000000000000}
@@ -20,20 +20,20 @@ Database/32x32/user_add.png
 field: {DBBF9EE3-C30E-4456-A81F-ED8C2E8DF91B}
 name: Click
 key: click
-content-length: 34
+content-length: 33
 
-relevateimport:loadcsv(id=$Target)
+usercsvimport:loadcsv(id=$Target)
 ----field----
 field: {1193B1A3-0148-413F-A979-49B39AA4A2AF}
 name: ID
 key: id
-content-length: 14
+content-length: 13
 
-RelevateImport
+UserCsvImport
 ----version----
 language: en
 version: 1
-revision: 9dc8c3c7-e740-4926-bd69-f36df89add4c
+revision: 25bc71a6-55fb-4843-84d3-d1d5341f4b5e
 
 ----field----
 field: {4DF6DA21-E745-444C-956E-1D4A96AB8821}
@@ -76,14 +76,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-9dc8c3c7-e740-4926-bd69-f36df89add4c
+25bc71a6-55fb-4843-84d3-d1d5341f4b5e
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 34
 
-20151028T175136:635816514961000872
+20151112T185220:635829511401457569
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

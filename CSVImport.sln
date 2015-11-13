@@ -5,9 +5,9 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Website", "web\Website\Website.csproj", "{4953AAA9-9F2A-4A27-B95D-53A514E60418}"
 EndProject
-Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "RelevateImport.TDS.Master", "RelevateImport.TDS.Master\RelevateImport.TDS.Master.scproj", "{F27E8557-B05B-43BD-A6D6-C1984283EE4E}"
+Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "UserCsvImport.Tds.Master", "RelevateImport.TDS.Master\UserCsvImport.Tds.Master.scproj", "{F27E8557-B05B-43BD-A6D6-C1984283EE4E}"
 EndProject
-Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "RelevateImport.Tds.Core", "RelevateImport.Tds.Core\RelevateImport.Tds.Core.scproj", "{38F1EBE4-2AF2-4894-ACEA-E922829D5021}"
+Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "UserCsvImport.Tds.Core", "RelevateImport.Tds.Core\UserCsvImport.Tds.Core.scproj", "{38F1EBE4-2AF2-4894-ACEA-E922829D5021}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserCsvImport", "src\UserCsvImport\UserCsvImport.csproj", "{E72AC8A4-C2AB-4835-B918-A034C6953DDA}"
 EndProject

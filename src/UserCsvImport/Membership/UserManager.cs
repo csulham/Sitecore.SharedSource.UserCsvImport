@@ -182,14 +182,14 @@ namespace UserCsvImport.Membership
 		/// <returns></returns>
 		private string AddDomain(string userName_or_domainName)
 		{
-			if (string.IsNullOrEmpty(userName_or_domainName) || string.IsNullOrEmpty(UserCsvImportSettings.RelevateUserDomain))
+			if (string.IsNullOrEmpty(userName_or_domainName) || string.IsNullOrEmpty(UserCsvImportSettings.CsvUserDomain))
 			{
 				// throw an exception on purpose here when we try to 
 				// do something with a null string so we don't make 
 				// a bad user
 				return null;
 			}
-			return string.Format("{0}\\{1}", UserCsvImportSettings.RelevateUserDomain, userName_or_domainName);
+			return string.Format("{0}\\{1}", UserCsvImportSettings.CsvUserDomain, userName_or_domainName);
 		}
 	}
 }

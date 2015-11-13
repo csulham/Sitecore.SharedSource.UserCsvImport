@@ -9,11 +9,11 @@ using Sitecore.Diagnostics;
 
 namespace UserCsvImport.CustomSitecore
 {
-	public class RelevateUserImportAgent : Sitecore.Tasks.BaseAgent
+	public class UserCsvImportAgent : Sitecore.Tasks.BaseAgent
 	{
 		private readonly string CsvFolderRoot;
 
-		public RelevateUserImportAgent(string csvFolderRoot)
+		public UserCsvImportAgent(string csvFolderRoot)
 		{
 			CsvFolderRoot = csvFolderRoot;
 		}

@@ -1,33 +1,33 @@
 ----item----
 version: 1
-id: {53F3EA09-C1F1-46D8-9F95-4BD0F067B15B}
+id: {4416FA1F-117A-47A8-9704-DA1A1F769C2B}
 database: core
-path: /sitecore/templates/System/Security/Custom Profiles/HotDeals Profile/Relevate Profile Data/Channel
-parent: {2B7C085F-959F-4AF3-8DBE-94E2B5C80BC2}
-name: Channel
+path: /sitecore/content/Applications/Content Editor/Ribbons/Contextual Ribbons/User CSV Import/User Import
+parent: {DF7BE12D-B095-47ED-A8C6-6801AAB4677B}
+name: User Import
 master: {00000000-0000-0000-0000-000000000000}
-template: {455A3E98-A627-4B40-8035-E683A0331AC7}
-templatekey: Template field
+template: {EC6D62A5-5D00-4329-8958-8AC1AD100EBB}
+templatekey: Strip
 
 ----field----
-field: {AB162CC0-DC80-4ABF-8871-998EE5D7BA32}
-name: Type
-key: type
-content-length: 16
+field: {12C1CEB4-F549-472A-97ED-99BFF70EB84E}
+name: ID
+key: id
+content-length: 13
 
-Single-Line Text
-----field----
-field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
-name: __Sortorder
-key: __sortorder
-content-length: 3
-
-700
+UserCsvImport
 ----version----
 language: en
 version: 1
-revision: 653078c7-22ff-4faf-b42f-59e8c517119b
+revision: a015309a-33ce-4249-a2ab-ad60b7662c4d
 
+----field----
+field: {5453DC07-6A17-48BA-8D05-17DB90A2E795}
+name: Header
+key: header
+content-length: 6
+
+Import
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -41,7 +41,7 @@ name: __Created
 key: __created
 content-length: 15
 
-20151012T114529
+20151011T124218
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -55,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-653078c7-22ff-4faf-b42f-59e8c517119b
+a015309a-33ce-4249-a2ab-ad60b7662c4d
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 34
 
-20151012T121513:635802489139880010
+20151112T185144:635829511040521479
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

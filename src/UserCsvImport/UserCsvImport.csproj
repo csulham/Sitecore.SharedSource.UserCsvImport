@@ -66,7 +66,7 @@
     </Compile>
     <Compile Include="CustomSitecore\Forms\CsvUserImportForm.cs" />
     <Compile Include="CustomSitecore\LoadCsvButtonAction.cs" />
-    <Compile Include="CustomSitecore\RelevateUserImportAgent.cs" />
+    <Compile Include="CustomSitecore\UserCsvImportAgent.cs" />
     <Compile Include="CustomSitecore\UserImportManager.cs" />
     <Compile Include="Downloader\FileDownloaderFactory.cs" />
     <Compile Include="Downloader\DirectoryUtil.cs" />
