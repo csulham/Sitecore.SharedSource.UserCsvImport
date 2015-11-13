@@ -6,9 +6,12 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>f27e8557-b05b-43bd-a6d6-c1984283ee4e</ProjectGuid>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
-    <SourceWebPhysicalPath>..\web\Website</SourceWebPhysicalPath>
-    <SourceWebProject>{4953aaa9-9f2a-4a27-b95d-53a514e60418}|web\Website\Website.csproj</SourceWebProject>
-    <SourceWebVirtualPath>/Website.csproj</SourceWebVirtualPath>
+    <SourceWebPhysicalPath>
+    </SourceWebPhysicalPath>
+    <SourceWebProject>
+    </SourceWebProject>
+    <SourceWebVirtualPath>
+    </SourceWebVirtualPath>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <EnableUpdateable>true</EnableUpdateable>
     <UseMerge>true</UseMerge>
@@ -45,12 +48,6 @@
     <AssemblyAttributes Include="AssemblyVersion">
       <Value>$(AssemblyVersion)</Value>
     </AssemblyAttributes>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\web\Website\Website.csproj">
-      <Project>{4953aaa9-9f2a-4a27-b95d-53a514e60418}</Project>
-      <Name>Website</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <SitecoreItem Include="sitecore\system.item">
