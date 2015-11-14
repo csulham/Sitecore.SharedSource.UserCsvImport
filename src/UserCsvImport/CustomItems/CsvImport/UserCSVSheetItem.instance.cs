@@ -83,9 +83,11 @@ namespace Sitecore.SharedSource.UserCsvImport.CustomItems.CsvImport
 				if (string.IsNullOrEmpty(user.Email))
 				{
 					Log.Debug("User contained no email data. \nRow Data = "+ map.DictionaryData, this);
-					continue;
+					
+					//Email isn't required if we have a separate identity column.
+					//continue;
 				}
-
+				
 				yield return user;
 			}
 		}

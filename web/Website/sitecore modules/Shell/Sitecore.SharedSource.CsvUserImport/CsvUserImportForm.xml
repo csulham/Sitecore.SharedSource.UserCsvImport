@@ -12,13 +12,10 @@
 				<Literal Text="This wizard helps you:"/>
 				<ul>
 					<li class="scWizardBullet">
-						<Literal Text="Choose publishing mode."/>
+						<Literal Text="Download the latest User CSV file."/>
 					</li>
 					<li class="scWizardBullet">
-						<Literal Text="Select the languages to publish."/>
-					</li>
-					<li class="scWizardBullet">
-						<Literal Text="Select the publishing targets."/>
+						<Literal Text="Import the users from the CSV file specified."/>
 					</li>
 				</ul>
 			</WizardFormFirstPage>

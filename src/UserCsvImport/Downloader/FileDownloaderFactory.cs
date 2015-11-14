@@ -4,15 +4,11 @@
 	{
 		public static IFileDownloader GetDownloader()
 		{
-			if (UserCsvImportSettings.FtpHostname.ToLower().StartsWith("ftp"))
-			{
-				return new FtpFileDownloader(UserCsvImportSettings.FtpHostname, UserCsvImportSettings.FtpUsername, UserCsvImportSettings.FtpPassword);
-			}
-			if (UserCsvImportSettings.FtpHostname.ToLower().StartsWith("sftp"))
+			if (UserCsvImportSettings.FtpUseSecureDownloader)
 			{
 				return new SshFileDownloader(UserCsvImportSettings.FtpHostname, UserCsvImportSettings.FtpUsername, UserCsvImportSettings.FtpPassword);
 			}
-			return null;
+			return new FtpFileDownloader(UserCsvImportSettings.FtpHostname, UserCsvImportSettings.FtpUsername, UserCsvImportSettings.FtpPassword);
 		}
 	}
 }

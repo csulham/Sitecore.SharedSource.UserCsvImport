@@ -154,7 +154,7 @@ namespace Sitecore.SharedSource.UserCsvImport.CustomSitecore.Forms
 			{
 				UserImportStatus status = UserImportStatus.GetStatus(handle);
 				if (status == null)
-					throw new Exception("The publishing process was unexpectedly interrupted.");
+					throw new Exception("The import process was unexpectedly interrupted.");
 				if (!string.IsNullOrEmpty(status.ErrorMessage))
 				{
 					this.Active = "Retry";

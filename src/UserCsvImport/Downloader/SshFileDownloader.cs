@@ -28,7 +28,7 @@ namespace Sitecore.SharedSource.UserCsvImport.Downloader
 				return false;
 			}
 
-			var fileToDownload = string.Format("sftp://{0}/{1}", Hostname, fileName);
+			var fileToDownload =  fileName;
 			Log.Debug(string.Format("Attempting to download file " + fileToDownload));
 			
 			try
@@ -36,6 +36,7 @@ namespace Sitecore.SharedSource.UserCsvImport.Downloader
 				Log.Debug("Opening FTP Connection to " + Hostname);
 				using (var client = new SftpClient(Hostname, Username, Password))
 				{
+					client.Connect();
 					Log.Debug(string.Format("Connection to {0} opened.", Hostname));
 					var fileUpdated = client.GetLastWriteTime(fileName);
 					Log.Debug(string.Format("File {0} was last modified on {1}.", fileName, DateUtil.ToIsoDate(fileUpdated)));
