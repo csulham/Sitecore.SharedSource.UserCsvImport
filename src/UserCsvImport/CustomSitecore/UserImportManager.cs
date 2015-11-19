@@ -63,13 +63,6 @@ namespace Sitecore.SharedSource.UserCsvImport.CustomSitecore
 				status.CsvFileDate = file.LastWriteTime;
 
 				userCsvSheetItem.ImportUsersFromCsv(options.IgnoreFileDate, status);
-				// FAKE IMPORT FOR TESTING SHEER DIALOG
-				//status.TotalUserCount = 1000;
-				//do
-				//{
-				//	status.UsersProcessed++;
-				//	Thread.Sleep(10);
-				//} while (status.UsersProcessed < status.TotalUserCount);
 			}
 			catch (Exception e)
 			{
